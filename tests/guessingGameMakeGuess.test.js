@@ -2,7 +2,6 @@ let { testEquals } = require('./testHelpers');
 
 let newGuessingGame = require('../lib/newGuessingGame');
 let guessingGameMakeGuess = require('../lib/guessingGameMakeGuess');
-let guessingGameIsDone = require('../lib/guessingGameIsDone');
 
 function testIncrementsNumGuesses() {
   let game = newGuessingGame('hello');
@@ -33,7 +32,6 @@ function testIncorrectGuessDoesNotUpdateCurrentWord() {
 
   testEquals(game.currentWord, expectedCurrentWord, 'Making incorrect guess does not update currentWord');
 }
-
 
 testIncrementsNumGuesses();
 testCorrectGuessUpdatesCurrentWord();
